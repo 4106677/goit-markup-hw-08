@@ -94,6 +94,7 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-left: auto;
 }
 
 .contacts__item {
@@ -194,6 +195,7 @@ body {
 }
 
 .footer__contacts {
+  margin-bottom: 60px;
   width: 100%;
 }
 .footer__contacts .contacts {
@@ -261,6 +263,9 @@ body {
 }
 
 /*------------FOOTER JOIN-----------*/
+.join {
+  margin-bottom: 60px;
+}
 @media screen and (max-width: 767px) {
   .join {
     width: 100%;
@@ -352,6 +357,7 @@ body {
 
 .subscribe-input {
   padding-left: 16px;
+  margin-bottom: 30px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
