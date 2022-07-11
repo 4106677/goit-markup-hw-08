@@ -1,5 +1,11 @@
 /*---------WE DOING----------*/
 
+.works {
+	@media screen and (max-width: 1199px) {
+		display: none;
+	}
+}
+
 .works__header {
 	margin-bottom: 50px;
 	font-size: 36px;

@@ -9,8 +9,13 @@
 	margin: 0 auto;
 	background-color: #2f303a;
 	text-align: center;
-	padding-top: 200px;
-	padding-bottom: 200px;
+
+	padding-top: 118px;
+	padding-bottom: 118px;
+	@include desktop {
+		padding-top: 200px;
+		padding-bottom: 200px;
+	}
 }
 
 .hero__header {
@@ -18,12 +23,23 @@
 	margin-left: auto;
 	text-align: center;
 	margin-bottom: 30px;
-	max-width: 700px;
+	max-width: 360px;
+
 	font-weight: 900;
-	font-size: 44px;
-	line-height: 1.36;
+	font-size: 19px;
+
+	line-height: 1.4;
 
 	letter-spacing: 0.06em;
 	text-transform: uppercase;
 	color: var(--additional-text-color);
+	@include mobile {
+		font-size: 26px;
+		line-height: 1.62;
+	}
+	@include desktop {
+		max-width: 700px;
+		font-size: 44px;
+		line-height: 1.36;
+	}
 }

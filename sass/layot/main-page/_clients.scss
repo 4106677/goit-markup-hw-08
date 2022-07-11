@@ -11,15 +11,23 @@
 
 .clients {
 	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
 }
 
 .clients-item {
-	&:not(:first-child) {
-		margin-left: 30px;
-	}
-
-	width: 170px;
+	// &:not(:first-child) {
+	// 	margin-left: 30px;
+	// }
+	width: calc((100% - 30px) / 2);
+	// width: 170px;
 	height: 92px;
+	@include tablet {
+		width: calc((100% - 60px) / 3);
+	}
+	@include desktop {
+		width: calc((100% - 180px) / 6);
+	}
 }
 
 .clients-item-link {

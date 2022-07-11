@@ -10,6 +10,20 @@
 		display: flex;
 		align-items: center;
 	}
+	@media screen and (max-width: 767px) {
+		height: 60px;
+	}
+}
+
+.menu {
+	+ .contacts {
+		@media screen and (max-width: 767px) {
+			display: none;
+		}
+	}
+	@media screen and (max-width: 767px) {
+		display: none;
+	}
 }
 
 .menu__list {
