@@ -6,7 +6,7 @@
 }
 
 .header {
-	.container {
+	> .container {
 		display: flex;
 		align-items: center;
 	}
@@ -29,10 +29,11 @@
 .menu-open-btn {
 	border: none;
 	margin-left: auto;
-}
-
-.menu-open-ico {
+	margin-right: 7px;
 	background-color: transparent;
+	@include tablet {
+		display: none;
+	}
 }
 
 .menu__list {
@@ -75,4 +76,118 @@
 	line-height: 1.14;
 	letter-spacing: 0.02em;
 	color: var(--primary-text-color);
+}
+
+.menu__mob {
+	position: fixed;
+	background-color: var(--additional-text-color);
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 2;
+	padding-top: 21px;
+	padding-bottom: 48px;
+	.container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		justify-content: space-between;
+		overflow: auto;
+	}
+}
+
+.menu__mob-close {
+	display: block;
+	margin-left: auto;
+	background-color: transparent;
+	margin-bottom: 8px;
+}
+// .menu__mob-top {
+// }
+
+// .menu__mob-bottom {
+// }
+.mob__pages {
+	background-color: var(--additional-text-color);
+}
+
+.mob__pages-item:not(:last-child) {
+	margin-bottom: 32px;
+}
+
+.mob__pages-link {
+	&.current {
+		color: var(--accent-color);
+	}
+}
+
+.mob__pages-link {
+	font-weight: 500;
+	font-size: 40px;
+	line-height: calc(47 / 40);
+	letter-spacing: 0.02em;
+}
+
+.mob__contacts {
+	@include mobile320 {
+		font-weight: 500;
+		font-size: 30px;
+		line-height: calc(47 / 40);
+		letter-spacing: 0.02em;
+	}
+	font-weight: 500;
+	font-size: 34px;
+	line-height: calc(40 / 34);
+	letter-spacing: 0.02em;
+	margin-bottom: 64px;
+}
+
+.mob__contacts-item {
+	&:not(:last-child) {
+		margin-bottom: 32px;
+		color: var(--accent-color);
+	}
+	color: var(--secondary-text-color);
+}
+
+.mob__soc {
+	@media screen and (max-width: 405px) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px 10px;
+		width: 100%;
+	}
+}
+
+.mob__soc-item {
+	@media screen and (min-width: 406px) {
+		&:not(:last-child) {
+			:after {
+				content: "";
+				border: 1px solid rgba(33, 33, 33, 0.2);
+				transform: rotate(90deg);
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+		}
+		display: inline-block;
+		color: var(--accent-color);
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.22;
+		letter-spacing: 0.02em;
+	}
+	@media screen and (max-width: 405px) {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.22;
+		letter-spacing: 0.02em;
+
+		color: var(--accent-color);
+
+		flex-direction: row;
+		justify-content: space-between;
+		flex: 1 1 auto;
+	}
 }

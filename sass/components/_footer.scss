@@ -16,7 +16,17 @@
 
 	@media screen and (max-width: 767px) {
 		flex-direction: column;
-			align-items: baseline;
+		align-items: baseline;
+	}
+
+	@include tablet {
+		flex-wrap: wrap;
+	}
+
+	@include desktop {
+		align-items: baseline;
+		flex-wrap: nowrap;
+	}
 }
 
 .footer__contacts {
@@ -24,11 +34,16 @@
 	.contacts {
 		text-align: center;
 	}
+	width: 100%;
+
+	@include tablet {
+		width: calc(100% / 2);
+	}
 
 	@include desktop {
-		margin-right: 70px;
+		width: 301px;
+		margin-bottom: 0;
 	}
-	width: 100%;
 }
 
 // .footer-logo {
@@ -51,7 +66,7 @@
 		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 		color: var(--additional-text-color);
-		font-weight: 500;
+		font-weight: 400;
 		font-size: 14px;
 		line-height: 1.14;
 		letter-spacing: 0.02em;
@@ -80,6 +95,12 @@
 		color: var(--accent-color);
 	}
 
+	.link {
+		@media screen and (max-width: 1199px) {
+			margin: 0 auto;
+		}
+	}
+
 	transition-property: color;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -87,12 +108,10 @@
 	display: flex;
 
 	color: var(--secondary-text-color);
-	font-weight: 500;
+	font-weight: 400;
 	font-size: 14px;
 	line-height: 1.14;
 	letter-spacing: 0.02em;
-
-	text-align: center;
 }
 
 /*------------FOOTER JOIN-----------*/
@@ -101,6 +120,15 @@
 		width: 100%;
 	}
 	margin-bottom: 60px;
+
+	@include tablet {
+		width: calc(100% / 2);
+
+		@include desktop {
+			width: 206px;
+			margin-bottom: 0;
+		}
+	}
 }
 
 .join-header {
@@ -116,6 +144,10 @@
 .join-list {
 	display: flex;
 	justify-content: center;
+
+	@include desktop {
+		justify-content: start;
+	}
 }
 
 .join-item {
@@ -151,10 +183,15 @@
 }
 
 .subscribe {
+	@include tablet {
+		width: 450px;
+		margin: 0 auto;
+	}
+
 	@include desktop {
 		margin-left: 93px;
+		width: 570px;
 	}
-	width: 100%;
 }
 
 .subscribe-header {
@@ -171,6 +208,9 @@
 	display: flex;
 	// flex-wrap: no-wrap;
 	flex-wrap: wrap;
+	@include desktop {
+		position: relative;
+	}
 }
 
 .subscribe-input {
@@ -190,8 +230,9 @@
 	outline: transparent;
 	width: 100%;
 	height: 50px;
+
 	@include desktop {
-		width: 368px;
+		width: 358px;
 	}
 }
 
@@ -215,8 +256,9 @@
 
 	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 	@include desktop {
-		// margin-left: 12px;
+		margin-left: 12px;
 		position: absolute;
+		right: 0;
 	}
 }
 

@@ -35,12 +35,18 @@
 .filtr {
 	margin-bottom: 50px;
 	display: flex;
-	justify-content: center;
+	flex-wrap: wrap;
+
+	gap: 15px 8px;
+
+	@include tablet {
+		justify-content: center;
+	}
 }
 
-.filtr-btn:not(:last-child) {
-	margin-right: 8px;
-}
+// .filtr-btn:not(:last-child) {
+// 	margin-right: 8px;
+// }
 
 .portfolio-name {
 	font-weight: 700;
@@ -59,10 +65,10 @@
 }
 
 .portfolio {
-	flex-basis: calc(100% / 3 - 60px);
 	display: flex;
 	flex-wrap: wrap;
-	margin: -15px;
+	// margin: -15px;
+	gap: 30px;
 }
 
 .portfolio-item {
@@ -80,7 +86,17 @@
 	transition-property: box-shadow;
 	transition-duration: 250ms;
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	margin: 15px;
+	// margin: 15px;
+
+	flex-basis: calc((100% - 0px) / 1);
+
+	@include tablet {
+		flex-basis: calc((100% - 30px) / 2);
+	}
+
+	@include desktop {
+		flex-basis: calc((100% - 60px) / 3);
+	}
 }
 
 // .portfolio-item:hover .portfolio-text {

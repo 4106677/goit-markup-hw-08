@@ -34,17 +34,72 @@
                     </li>
                 </ul>
             </nav>
-            <ul class="contacts list">
-                <li><a class="contacts__item link" href="mailto:info@devstudio.com">
-                        <svg width="16" height="12" class="contacts__icon">
+            <ul class="heder__contacts list">
+                <li><a class="heder__contacts-item link" href="mailto:info@devstudio.com">
+                        <svg width="16" height="12" class="heder__contacts-icon">
                             <use href="./images/icons.svg#icon-mail"></use>
                         </svg>
                         info@devstudio.com</a></li>
-                <li class="contacts__item"><a class="link" href="tel:+380961111111">
-                        <svg width="10" height="12" class="contacts__icon">
+                <li class="heder__contacts-item"><a class="link" href="tel:+380961111111">
+                        <svg width="10" height="12" class="heder__contacts-icon">
                             <use href="./images/icons.svg#icon-phone"></use>
                         </svg>+38 096 111 11 11</a></li>
             </ul>
+            <button type="button" class="menu-open-btn">
+                <svg width="24" height="16" class="menu-open-ico">
+                    <use href="./images/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="menu__mob is-hidden">
+                <div class="container">
+
+                    <div class="menu__mob-top">
+                        <button type="button" class="menu__mob-close">
+                            <svg class="modal-close-ico" width="30" height="30">
+                                <use href="./images/icons.svg#icon-modal-close"></use>
+
+                            </svg>
+                        </button>
+                        <ul class="mob__pages list">
+                            <li class="mob__pages-item">
+                                <a class="mob__pages-link link" href="index.html" target="_self">Студия</a>
+                            </li>
+                            <li class="mob__pages-item">
+                                <a class="mob__pages-link link current" href="portfolio.html"
+                                    target="_self">Портфолио</a>
+                            </li>
+                            <li class="mob__pages-item">
+                                <a class="mob__pages-link link" href="">Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu__mob-bottom">
+                        <ul class="mob__contacts list">
+                            <li class="mob__contacts-item"><a class="link"
+                                    href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                            <li class="mob__contacts-item"><a class="link" href="tel:+380961111111">+38 096 111 11
+                                    11</a>
+                            </li>
+                        </ul>
+                        <ul class="mob__soc list">
+                            <li class="mob__soc-item">
+                                <a class="link" href="">Instagram</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a class="link" href="">Twitter</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a class="link" href="">Facebook</a>
+                            </li>
+                            <li class="mob__soc-item">
+                                <a class="link" href="">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </header>
 
@@ -66,7 +121,27 @@
                     <li class="portfolio-item">
 
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter1.jpg" alt="Технокряк" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                ./images/portfolio/desktop/1-project.jpg 1x,
+                                                                                ./images/portfolio/desktop/1-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                    ./images/portfolio/tablet/1-project-tab.jpg 1x,
+                                                                                    ./images/portfolio/tablet/1-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                ./images/portfolio/mobile/1-project-mob.jpg 1x,
+                                                                                ./images/portfolio/mobile/1-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter1.jpg" alt="Технокряк" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -80,8 +155,28 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter2.jpg" alt="Постер New Orlean vs Golden Star" width="370"
-                                height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                            ./images/portfolio/desktop/2-project.jpg 1x,
+                                                                                                            ./images/portfolio/desktop/2-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                ./images/portfolio/tablet/2-project-tab.jpg 1x,
+                                                                                                                ./images/portfolio/tablet/2-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                            ./images/portfolio/mobile/2-project-mob.jpg 1x,
+                                                                                                            ./images/portfolio/mobile/2-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter2.jpg" alt="Постер New Orlean vs Golden Star"
+                                    width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -96,7 +191,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter3.jpg" alt="Ресторан Seafood" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/3-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/3-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/3-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/3-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/3-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/3-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter3.jpg" alt="Ресторан Seafood" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -111,7 +226,29 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter4.jpg" alt="Проект Prime" width="370" height="294">
+
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/4-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/4-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/4-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/4-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/4-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/4-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter4.jpg" alt="Постер New Orlean vs Golden Star"
+                                    width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -126,7 +263,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter5.jpg" alt="Проект Boxes" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/5-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/5-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/5-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/5-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/5-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/5-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter5.jpg" alt="Проект Boxes" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -141,8 +298,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter6.jpg" alt="Inspiration has no Borders" width="370"
-                                height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/6-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/6-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/6-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/6-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/6-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/6-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter6.jpg" alt="Inspiration has no Borders" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -157,8 +333,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter7.jpg" alt="Inspiration has no Borders" width="370"
-                                height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/7-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/7-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/7-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/7-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/7-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/7-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter7.jpg" alt="Inspiration has no Borders" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -173,7 +368,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter8.jpg" alt="Проект LAB" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/8-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/8-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/8-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/8-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/8-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/8-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter8.jpg" alt="Проект LAB" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -188,7 +403,27 @@
                     </li>
                     <li class="portfolio-item">
                         <div class="portfolio-wrap">
-                            <img src="./images/portfolio/filter9.jpg" alt="Growing Business" width="370" height="294">
+                            <picture>
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/desktop/9-project.jpg 1x,
+                                                                                                                                        ./images/portfolio/desktop/9-project-2x.jpg 2x"
+                                    media="(min-width: 1200px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                            ./images/portfolio/tablet/9-project-tab.jpg 1x,
+                                                                                                                                            ./images/portfolio/tablet/9-project-tab-2x.jpg 2x"
+                                    media="(min-width: 768px)" />
+
+                                <source
+                                    srcset="
+                                                                                                                                        ./images/portfolio/mobile/9-project-mob.jpg 1x,
+                                                                                                                                        ./images/portfolio/mobile/9-project-mob-2x.jpg 2x"
+                                    media="(min-width: 320px)" />
+                                <img src="./images/portfolio/filter9.jpg" alt="Growing Business" width="450">
+
+                            </picture>
                             <p class="portfolio-text">Ресурс предлагает комплексные предложения с разным уровнем
                                 функционала и сервисов. Все
                                 это
@@ -220,7 +455,8 @@
                 <ul class="contacts list">
                     <li class="contacts-item"><a class="link" href="mailto:info@devstudio.com">info@devstudio.com</a>
                     </li>
-                    <li class="contacts-item"><a class="link" href="tel:+380961111111">+38 096 111 11 11</a></li>
+                    <li class="contacts-item"><a class="link" href="tel:+380961111111">+38 096 111
+                            11 11</a></li>
                 </ul>
             </div>
             <div class="join">
@@ -261,18 +497,26 @@
                     Подпишитесь на рассылку
                 </p>
                 <form class="subscribe-form">
-                    <!-- <label for="user-email">Email</label> -->
+                    <label for="user-email"></label>
+
                     <input placeholder="E-mail" type="email" name="email" id="email" class="subscribe-input" />
-                    <button type="submit" class="subscribe-btn">Подписаться</button>
-                    <svg class="footer-send-ico">
-                        <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
+
+                    <button type="submit" class="subscribe-btn">
+                        Подписаться
+                        <svg class="footer-send-ico" width="24" height="24">
+                            <use href="./images/icons.svg#icon-send"></use>
+                        </svg>
+                    </button>
+
+
+
                 </form>
             </div>
         </div>
     </footer>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

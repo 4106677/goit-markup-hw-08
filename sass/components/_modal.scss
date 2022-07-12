@@ -5,14 +5,30 @@
 	transform: translate(-50%, -50%) scale(1);
 	padding: 40px;
 
-	width: 528px;
-	min-height: 581px;
-
 	background-color: var(--additional-text-color);
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 
 	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+	min-height: 609px;
+	@include mobile320 {
+		width: calc(100% - 10px);
+		max-width: 450px;
+	}
+
+	@include mobile {
+		width: 450px;
+	}
+
+	@include tablet {
+		width: 450px;
+	}
+
+	@include desktop {
+		width: 528px;
+		min-height: 581px;
+	}
 }
 
 .modal-close {
@@ -177,10 +193,15 @@
 	justify-content: center;
 	color: var(--secondary-text-color);
 
-	font-weight: 400;
-	font-size: 14px;
-	line-height: calc(24 / 14);
 	letter-spacing: 0.03em;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: calc(14 / 12);
+
+	@include desktop {
+		font-size: 14px;
+		line-height: calc(24 / 14);
+	}
 }
 
 .modal-btn {
