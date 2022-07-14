@@ -36,11 +36,16 @@
 	display: flex;
 
 	@include tablet {
+		align-items: baseline;
 		&:not(:first-child) {
 			margin-top: 10px;
 		}
 		font-size: 12px;
 		line-height: calc(14 / 12);
+
+		.link {
+			display: flex;
+		}
 	}
 
 	@include desktop {
@@ -59,19 +64,19 @@
 	fill: currentColor;
 
 	@include tablet {
-		width: 10px;
-		height: 14px;
-		&:not(:first-child) {
-			width: 14px;
-			height: 10px;
+		width: 14px;
+		height: 10px;
+		&.phone {
+			width: 10px;
+			height: 14px;
 		}
 	}
 
 	@include desktop {
 		width: 16px;
 		height: 12px;
-		&:not(:first-child) {
-			width: 26px;
+		&.phone {
+			width: 10px;
 			height: 16px;
 		}
 	}

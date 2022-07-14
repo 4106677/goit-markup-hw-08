@@ -140,11 +140,19 @@ body {
 }
 @media screen and (min-width: 768px) {
   .heder__contacts-item {
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     font-size: 12px;
     line-height: 1.1666666667;
   }
   .heder__contacts-item:not(:first-child) {
     margin-top: 10px;
+  }
+  .heder__contacts-item .link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -166,12 +174,12 @@ body {
 }
 @media screen and (min-width: 768px) {
   .heder__contacts-icon {
-    width: 10px;
-    height: 14px;
-  }
-  .heder__contacts-icon:not(:first-child) {
     width: 14px;
     height: 10px;
+  }
+  .heder__contacts-icon.phone {
+    width: 10px;
+    height: 14px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -179,8 +187,8 @@ body {
     width: 16px;
     height: 12px;
   }
-  .heder__contacts-icon:not(:first-child) {
-    width: 26px;
+  .heder__contacts-icon.phone {
+    width: 10px;
     height: 16px;
   }
 }
@@ -753,10 +761,10 @@ body {
   font-weight: 700;
   color: var(--primary-text-color);
   letter-spacing: 0.03em;
+  font-size: 24px;
 }
 @media screen and (min-width: 768px) {
   .logo {
-    font-size: 24px;
     line-height: 1.1666666667;
     margin-right: 88px;
   }
