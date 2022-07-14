@@ -132,8 +132,7 @@
 .mob__contacts {
 	@include mobile320 {
 		font-weight: 500;
-		font-size: 30px;
-		line-height: calc(47 / 40);
+
 		letter-spacing: 0.02em;
 	}
 	font-weight: 500;
@@ -141,14 +140,24 @@
 	line-height: calc(40 / 34);
 	letter-spacing: 0.02em;
 	margin-bottom: 64px;
+
+	display: flex;
+	flex-direction: column-reverse;
 }
 
 .mob__contacts-item {
 	&:not(:last-child) {
-		margin-bottom: 32px;
-		color: var(--accent-color);
+		margin-top: 32px;
+		font-size: 24px;
+		line-height: calc(28 / 24);
+		color: var(--secondary-text-color);
 	}
-	color: var(--secondary-text-color);
+	font-size: 34px;
+	line-height: calc(40 / 34);
+	color: var(--accent-color);
+	@include mobile320 {
+		font-size: 32px;
+	}
 }
 
 .mob__soc {

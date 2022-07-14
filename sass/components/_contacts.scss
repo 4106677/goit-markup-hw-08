@@ -57,4 +57,22 @@
 .heder__contacts-icon {
 	margin-right: 10px;
 	fill: currentColor;
+
+	@include tablet {
+		width: 10px;
+		height: 14px;
+		&:not(:first-child) {
+			width: 14px;
+			height: 10px;
+		}
+	}
+
+	@include desktop {
+		width: 16px;
+		height: 12px;
+		&:not(:first-child) {
+			width: 26px;
+			height: 16px;
+		}
+	}
 }
